@@ -68,9 +68,13 @@ class RentalManager:
                 if vehicle.id == vehicle_id:
                     if vehicle.rental_status == "rented":
                         vehicle.return_vehicle()
-                        print(f"Rental for vehicle {vehicle_id} cancelled successfully.")
+                        print(
+                            f"Rental for vehicle {vehicle_id} cancelled successfully."
+                        )
                     else:
-                        print(f"Rental for vehicle {vehicle_id} cancelled successfully.")
+                        print(
+                            f"Rental for vehicle {vehicle_id} cancelled successfully."
+                        )
                     return
             print("Vehicle ID found in rental file but not in current system.")
         else:

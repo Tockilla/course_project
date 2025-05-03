@@ -9,7 +9,7 @@ def test_motorcycle_initialization():
         year=2019,
         color="Red",
         engine_capacity=1.0,
-        extra="Sport"
+        extra="Sport",
     )
 
     assert moto.id == "M001"
@@ -29,7 +29,7 @@ def test_motorcycle_show_info():
         year=2019,
         color="Red",
         engine_capacity=1.0,
-        extra="Sport"
+        extra="Sport",
     )
 
     info = moto.show_info()

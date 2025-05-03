@@ -1,7 +1,10 @@
 from rental.transport.transport_base import Transport
 
+
 class Car(Transport):
-    def __init__(self, id, brand, model, year=None, color=None, engine_capacity=None, extra=None):
+    def __init__(
+        self, id, brand, model, year=None, color=None, engine_capacity=None, extra=None
+    ):
         super().__init__(id, brand, model)
         self.year = year
         self.color = color

@@ -1,5 +1,3 @@
-
-
 from rental.transport.agricultural import Agricultural
 from rental.transport.car import Car
 from rental.transport.motorcycle import Motorcycle

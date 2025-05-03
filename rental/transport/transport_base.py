@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Transport(ABC):
     def __init__(self, id, brand, model):
         self.id = id

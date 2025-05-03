@@ -1,4 +1,5 @@
 import csv
+
 from rental.vehicle_factory import VehicleFactory
 
 DEBUG = False
@@ -12,7 +13,7 @@ class DataLoader:
     def load_vehicles(self):
         vehicles = []
         try:
-            with open(self.file_path, newline='', encoding='utf-8') as csvfile:
+            with open(self.file_path, newline="", encoding="utf-8") as csvfile:
                 reader = csv.DictReader(csvfile)
 
                 for row in reader:
@@ -25,7 +26,7 @@ class DataLoader:
                         "year": row.get("year"),
                         "color": row.get("color"),
                         "engine_capacity": row.get("engine_capacity"),
-                        "extra": row.get("extra")
+                        "extra": row.get("extra"),
                     }
 
                     try:
@@ -34,9 +35,9 @@ class DataLoader:
                     except ValueError as e:
                         if DEBUG:
                             print(f" Warning: {e} – skipping row: {row}")
-        # debugas tam kad nelaudintu visos duomenu bazes man
+                    # debugas tam kad nelaudintu visos duomenu bazes man
                     except FileNotFoundError:
-                           print(f" Error: File '{self.file_path}' not found.")
+                        print(f" Error: File '{self.file_path}' not found.")
         except Exception as e:
             print(f" Unexpected error while loading vehicles: {e}")
 

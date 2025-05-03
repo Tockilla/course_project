@@ -10,6 +10,8 @@ def test_rental_record_creation():
 
 
 def test_rental_record_to_csv_row():
-    record = RentalRecords(vehicle_id="C001", customer_name="Jonas", rent_time=datetime(2025, 4, 25, 15, 0))
+    record = RentalRecords(
+        vehicle_id="C001", customer_name="Jonas", rent_time=datetime(2025, 4, 25, 15, 0)
+    )
     csv_row = record.to_csv_row()
     assert csv_row == "C001,Jonas,2025-04-25T15:00:00"

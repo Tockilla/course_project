@@ -12,7 +12,7 @@ def test_cancel_rental(tmp_path):
         model="Corolla",
         year=2020,
         color="Blue",
-        engine_capacity=1.8
+        engine_capacity=1.8,
     )
     car.rent()  # Automobilį iš karto nustatom kaip 'rented'
 
