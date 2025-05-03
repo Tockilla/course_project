@@ -1,0 +1,57 @@
+id,type,brand,model,year,color,engine_capacity,extra
+
+1,car,Toyota,Corolla,2020,Blue,1.8,Hybrid
+6,car,Honda,Civic,2019,Gray,2.0,Turbo
+7,car,Ford,Focus,2021,Black,1.5,Diesel
+8,car,BMW,320i,2022,White,2.0,Sport Line
+9,car,Audi,A4,2020,Silver,2.0,Quattro
+10,car,Volkswagen,Golf,2018,Blue,1.4,Comfortline
+11,car,Mercedes,C-Class,2022,Red,2.0,AMG
+12,car,Kia,Ceed,2021,Green,1.6,EcoDynamics
+13,car,Peugeot,308,2017,Yellow,1.2,GT Line
+14,car,Renault,Megane,2019,Black,1.5,DCi
+
+2,motorcycle,Yamaha,R1,2019,Red,1.0,Sport
+15,motorcycle,Honda,CBR600RR,2020,White,0.6,Race
+16,motorcycle,Suzuki,GSX-R750,2021,Black,0.75,Supersport
+17,motorcycle,Kawasaki,Ninja 400,2022,Green,0.4,Lightweight
+18,motorcycle,Harley-Davidson,Iron 883,2018,Black,0.9,Cruiser
+19,motorcycle,Ducati,Panigale V2,2021,Red,0.95,Superbike
+20,motorcycle,BMW,S1000RR,2020,Blue,1.0,Race
+21,motorcycle,Triumph,Street Triple,2022,Silver,0.765,Naked
+22,motorcycle,KTM,Duke 390,2019,Orange,0.39,Naked
+23,motorcycle,Aprilia,RS 660,2021,Purple,0.66,Sport
+
+3,agricultural,John Deere,X300,2018,Green,,With trailer
+24,agricultural,Case,Maxxum 150,2020,Red,,Cab and loader
+25,agricultural,New Holland,T7,2021,Blue,,4WD
+26,agricultural,Massey Ferguson,MF 4700,2019,Red,,Utility
+27,agricultural,Claas,Arion 650,2022,Green,,Premium
+28,agricultural,Valtra,T Series,2018,Black,,Autopilot
+29,agricultural,Deutz-Fahr,Agrotron,2017,Green,,Hydraulic
+30,agricultural,Fendt,720 Vario,2020,Gray,,SmartDrive
+31,agricultural,Kubota,M7-171,2021,Orange,,Eco Mode
+32,agricultural,Zetor,Proxima,2019,Red,,Budget
+
+4,non_motor,BMX,Freestyle,2021,Black,,BMX type
+33,non_motor,Trek,FX 3,2020,Gray,,Hybrid bike
+34,non_motor,Specialized,Sirrus,2019,Blue,,Fitness bike
+35,non_motor,Giant,Escape 3,2021,Green,,City use
+36,non_motor,Cannondale,Quick,2022,Red,,Aluminum frame
+37,non_motor,Bianchi,C-Sport,2018,White,,Urban
+38,non_motor,GT,Aggressor,2020,Black,,Mountain bike
+39,non_motor,Cube,Nature,2021,Blue,,Touring
+40,non_motor,Merida,Crossway,2019,Orange,,Comfort
+41,non_motor,Scott,Sub Cross,2022,Yellow,,Disc brakes
+
+5,marine,Yamaha,JetBoat,2022,White,3.0,With cabin
+42,marine,Sea-Doo,Spark,2021,Yellow,0.9,Jet ski
+43,marine,Kawasaki,STX 160,2020,Green,1.0,Personal Watercraft
+44,marine,Beneteau,Flyer 8,2022,Blue,2.0,Day boat
+45,marine,Bayliner,Element E18,2019,White,1.8,Outboard
+46,marine,Jeanneau,Cap Camarat,2020,Silver,2.1,Fishing
+47,marine,Quicksilver,Activ 555,2021,Black,1.5,Sport boat
+48,marine,Regal,LS2,2022,Red,2.5,Luxury
+49,marine,Lund,1875 Impact,2018,Gray,1.2,Aluminum hull
+50,marine,MasterCraft,NXT22,2020,Blue,3.0,Wakesurf
+
