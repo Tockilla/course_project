@@ -81,4 +81,5 @@ Abu failai buvo patalpinti **vienoje bendroje saugykloje**, užtikrinant aiški�
 obsidian://open?vault=project&file=2_semester%2FOOP%2FPasted%20image%2020250503222712.png
 
 
-![[Screenshot From 2025-05-03 22-58-36.png]]
+[Sistemos diagrama](images/Screenshot-2025-05-03-22-58-36.png)
+
