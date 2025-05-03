@@ -1,0 +1,84 @@
+
+# Kursinio darbo ataskaita  iš objektinio programavimo
+
+
+# Įvadas
+
+## Apie ką šis projektas?
+
+Tai yra transporto nuomos sistema, parašyta Python kalba, leidžianti ieškoti, nuomoti skirtingų tipų transporto priemones: (automobilius, motociklus, žemės ūkio technika, dviračius).
+
+Sistema palaiko šias funkcijas:
+- Transporto priemonių sąrašo įkėlimas
+- Nuomos ir grąžinimo logika
+- Įrašų saugojimas CSV faile
+- Vienetų testavimas
+
+###  Kaip paleisti bei naudotis programą?
+
+1. Įsitikinkite, kad turite **Python 3.x** versiją.
+2. Paleiskite `main.py` failą terminale: bash python main.py
+3. ![[Pasted image 20250503174651.png]]
+4. Atidarius langą, ekrane pasirodys Transporto nuomos sistema su penkiais galimais pasirinkimais. Norėdami atlikti konkretų veiksmą (pvz., peržiūrėti transporto priemones ar išsinuomoti), įveskite atitinkamą skaičių nuo 1 iki 5 ir paspauskite Enter.
+
+5. **Norėdami pamatyti, kokios transporto priemonės yra galimos nuomai, pirmiausia turite pasirinkti 1 – „Show all vehicles“.** Tik tada galėsite matyti siūlomų automobilių sąrašą ir priimti sprendimą dėl nuomos. Atrodo taip:![[Pasted image 20250503180328.png]]6. **Kiekvienai transporto priemonei pateikiama ši informacija:  
+– **Transporto tipas** (pvz., automobilis, motociklas),  
+– **Identifikavimo numeris (ID)** – šio numerio programa prašys, kai norėsite atlikti nuomos ar atšaukimo veiksmą,  
+– **Pagaminimo metai**,  
+– **Spalva**,  
+– **Variklio talpa (litrais)**,  
+– **Papildoma informacija** – pavyzdžiui, ar transporto priemonė yra hibridinė, elektrinė ir pan.
+
+Kai kuriais atvejais sistema gali __paprašyti papildomos informacijos__, pavyzdžiui, įvesti savo vardą – tai reikalinga nuomos ar atšaukimo veiksmams atlikti. Tokiu atveju tiesiog įrašykite savo vardą ir tęskite pagal pateiktas instrukcijas.
+
+
+1. **Trumpas sistemos aprašymas:**
+Ši sistema leidžia peržiūrėti visus galimus transporto pasirinkimus, ieškoti konkretaus automobilio pagal ID, išsinuomoti ar atšaukti nuomą bei išeiti iš programos.
+
+2. **Kaip pasirinkti meniu punktą:**
+    
+	Skaičių reikia įrašyti tiksliai – pvz., norėdami išsinuomoti transporto priemonę, įveskite skaičių 3 ir paspauskite Enter.
+    
+3. **Ką daryti, jei įvedate neteisingą reikšmę:**
+    
+	Jei įvesite neteisingą pasirinkimą (pvz., raidę arba skaičių, kurio nėra meniu), sistema parodys klaidos pranešimą ir paprašys įvesti iš naujo.
+    
+4. **Išsamesnė informacija apie vardo įvedimą:**
+    
+	Kai kurios funkcijos (pvz., nuoma ar atšaukimas) gali paprašyti įvesti jūsų vardą, kad būtų galima identifikuoti naudotoją. Įrašykite jį tiksliai taip, kaip naudojote anksčiau, kad sistema jus atpažintų.
+    
+5. **Išėjimo instrukcija:**
+    
+	Norėdami išeiti iš sistemos, pasirinkite 5. Programa bus uždaryta automatiškai.
+    
+6. **Patarimas dėl patogumo:**
+    
+	Naudodami sistemą patogiausia dirbti pilnu ekranu, kad visos instrukcijos būtų aiškiai matomos.
+    
+
+# Analizė 
+## Darbo įkėlimas naudojant Git ir GitHub
+
+Projektas buvo valdomas naudojant versijų kontrolės sistemą **Git**. Sukūrus vietinę saugyklą, programos failai bei dokumentacija (Markdown formato failas) buvo įkelti į **GitHub** platformą, kuri pasirinkta kaip nuotolinė saugykla darbui pateikti.
+
+Į GitHub buvo įkelti šie failai:
+
+- Programos pirminis kodas,
+    
+- Aprašomasis failas `README.md`, kuriame pateikta informacija apie programos veikimą, struktūrą bei naudojimo instrukcijos.
+
+
+Abu failai buvo patalpinti **vienoje bendroje saugykloje**, užtikrinant aiškią struktūrą ir prieinamumą.
+
+## Objektinio programavimo pamatai jų panaudojimas ir paaiškinimas
+
+### Polimorfizmas
+
+**Polimorfizmas** reiškia, kad ta pati metodo antraštė (pvz., `show_info()`) gali būti **įgyvendinta skirtingai** skirtingose klasėse. Tai leidžia įvairiai naudoti tą patį metodą, o elgesys priklauso nuo to, kokios konkrečios klasės objektas tą metodą kviečia.
+![[Pasted image 20250503223018.png]] 
+![[Pasted image 20250503223559.png]] 
+
+obsidian://open?vault=project&file=2_semester%2FOOP%2FPasted%20image%2020250503222712.png
+
+
+![[Screenshot From 2025-05-03 22-58-36.png]]
