@@ -22,7 +22,7 @@ Sistema palaiko šias funkcijas:
 4. Atidarius langą, ekrane pasirodys Transporto nuomos sistema su penkiais galimais pasirinkimais. Norėdami atlikti konkretų veiksmą (pvz., peržiūrėti transporto priemones ar išsinuomoti), įveskite atitinkamą skaičių nuo 1 iki 5 ir paspauskite Enter.
 
 5. **Norėdami pamatyti, kokios transporto priemonės yra galimos nuomai, pirmiausia turite pasirinkti 1 – „Show all vehicles“.** Tik tada galėsite matyti siūlomų automobilių sąrašą ir priimti sprendimą dėl nuomos.
-6. Atrodo taip:![naudojimas](images/program.use.png)
+6. ![naudojimas](images/program.use.png)
 
 6. **Kiekvienai transporto priemonei pateikiama ši informacija:  
 – **Transporto tipas** (pvz., automobilis, motociklas),  
