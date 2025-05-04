@@ -88,13 +88,13 @@ Tai leidžia visus transporto priemonių objektus (nesvarbu, ar tai automobilis,
 
 Pateiktuose ekrano nuotraukose matyti, kaip kiekviena klasė (`Car` ir `Motorcycle`) turi savo `show_info()` metodo versiją, kuri gražiai suformatuoja ir pateikia visą su objektu susijusią informaciją: markę, modelį, metus, spalvą, variklio tūrį bei papildomą informaciją.
 
-Abstrakcija
-Kas yra abstrakti klasė?
+## Abstrakcija
+### Kas yra abstrakti klasė?
 Abstrakti klasė – tai tarsi šablonas būsimiems objektams, kuris apibrėžia, kokie metodai ar savybės privalo būti klasėse, paveldinčiose iš jos. Ji neskirta kurti tiesioginius objektus, o naudojamas kaip pagrindas, pamatas (šablonas), pagal kurį kuriamos konkrečios klasės.
 
 Galima sakyti, kad tai „klasės šablonas“, kuriame suplanuojama, ką turės paveldinčios klasės, tačiau pats abstraktus metodas (pvz., show_info()) dar neturi konkretaus įgyvendinimo.
 
-abs.png
+![](images/abs.png)
 
 Paveldėjimo pagalba konkrečios klasės (pvz., Car, Motorcycle) perima bendrus bruožus iš abstrakčios klasės (pvz., Transport) ir pačios įgyvendina trūkstamą logiką – šiuo atveju metodą show_info().
 
@@ -108,25 +108,29 @@ from abc import ABC, abstractmethod
 Šis abstrakcijos principas leidžia:
 
 Sutalpinti bendrą logiką vienoje vietoje, išvengiant pasikartojimo;
-Užtikrinti struktūros vientisumą – visos transporto priemonės turės show_info() metodą;
-Lengvai išplėsti sistemą pridedant naujus transporto tipų klasės (pvz., Truck, Car, neprarandant suderinamumo su jau egzistuojančia logika.
+Užtikrinti struktūros vientisumą – visos transporto priemonės turės show_info() metodą;Lengvai išplėsti sistemą pridedant naujus transporto tipų klasės (pvz., Truck, Car, neprarandant suderinamumo su jau egzistuojančia logika.
 Ekrano nuotraukoje parodyta, kaip sukuriama ši bazinė abstrakti klasė Transport bei abstraktus metodas show_info() – tai esminis žingsnis struktūrizuojant programą pagal OOP principus.
 
-Paveldėjimas
+## Paveldėjimas
 Paveldėjimas – tai objektinio programavimo principas, leidžiantis vienai klasei (pvz., Car) perimti savybes ir metodus iš kitos – bazinės klasės (pvz., Transport). Taip užtikrinamas kodo pakartotinis naudojimas ir leidžiama išplėsti esamą funkcionalumą, nekuriant visko iš naujo.
 
-Screenshot From 2025-05-04 16-00-32.png
+![](images/pav.png)
 
-Klasė Car paveldi iš abstrakčios bazinės klasės Transport, kuri apibrėžia bendrus visoms transporto priemonėms požymius – tokius kaip id, brand ir model. Naudojant super().__init__() metodą, paveldimi bendri atributai, o papildomi atributai, tokie kaip year, color, engine_capacity ir extra, pridedami Car klasėje. Taip užtikrinamas kodo pakartotinio naudojimo principas – bendra logika laikoma bazinėje klasėje, o specifinė informacija aprašoma paveldinčiose klasėse.
+Klasė Car paveldi iš abstrakčios bazinės klasės Transport, kuri apibrėžia bendrus visoms transporto priemonėms požymius – tokius kaip id, brand ir model.
+Naudojant super().__init__() metodą, paveldimi bendri atributai, o papildomi atributai, tokie kaip year, color, engine_capacity ir extra, pridedami Car klasėje.
+Taip užtikrinamas kodo pakartotinio naudojimo principas – bendra logika laikoma bazinėje klasėje, o specifinė informacija aprašoma paveldinčiose klasėse.
 
-Inkapsuliacija
+## Inkapsuliacija
 Inkapsuliacija – tai vidinių objekto duomenų apsaugojimas nuo tiesioginės prieigos iš išorės. Vietoj to siūloma naudoti metodus arba specialius „saugiklius“, kaip @property, kad būtų galima kontroliuoti:
-Pasted image 20250504171511.png
+
+![](images/ink.png)
+
+![](images/ink2.png)
 
 kaip tie duomenys pasiekiami,
 ar jie gali būti keičiami,
 ar reikalinga papildoma logika (pvz., validacija, logų rašymas ir t. t.).
-Pasted image 20250504172444.png
+
 
 Metodai kaip:
 
