@@ -35,7 +35,7 @@ class DataLoader:
                     except ValueError as e:
                         if DEBUG:
                             print(f" Warning: {e} – skipping row: {row}")
-                    # debugas tam kad nelaudintu visos duomenu bazes man
+
                     except FileNotFoundError:
                         print(f" Error: File '{self.file_path}' not found.")
         except Exception as e:

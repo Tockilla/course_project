@@ -1,5 +1,5 @@
 import pytest
-from rental.transport.car import Car  # arba Motorcycle, Agricultural...
+from rental.transport.car import Car  
 
 
 def test_rent_available_vehicle():
