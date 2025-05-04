@@ -239,3 +239,10 @@ with open(self.rental_file_path, "w") as file:
 |   `"a"` | Append (pridėjimas) | Atidaro failą priedui. Įrašai pridedami failo pabaigoje, neištrinant esamo turinio. |
 
 # Išvada
+
+- Sukūriau veikiančią programą, kuri leidžia registruoti ir valdyti transporto priemonių nuomą. Programa skaito ir rašo duomenis į CSV failus, todėl viskas išsaugoma net ir išjungus ją.
+- Naudojau keturis objektinio programavimo principus – paveldėjimą, abstrakciją, inkapsuliaciją ir polimorfizmą. Tai padėjo kodą padaryti aiškesnį ir lengviau tvarkomą.
+- Pritaikiau „Factory Method“ dizaino šabloną – jis labai praverčia, kai reikia kurti skirtingų tipų transporto priemones (pvz., automobilį ar motociklą) automatiškai pagal duomenis.
+- Failų valdymas leido ne tik išsaugoti duomenis, bet ir juos filtruoti, ištrinti ar pridėti naujus – tai padarė programą praktišką naudoti.
+- Projekte taip pat parodžiau, kaip veikia agregacija – pavyzdžiui, nuoma „priklauso“ transporto priemonei, bet jie abu egzistuoja atskirai.
+- Šiuo metu, jeigu galvočiau apie programos tobulinimą, kyla kelios idėjos. Pirmiausia būtų naudinga išplėsti transporto priemonių duomenų bazę – pridėti daugiau laukų arba naujų transporto tipų. Taip pat galima būtų pagerinti duomenų atvaizdavimą, kad viskas ekrane atrodytų aiškiau ir tvarkingiau. Galiausiai, būtų labai naudinga įdiegti galimybę pasirinkti, kokia kalba veikia programa – tai padarytų ją patogesnę platesniam vartotojų ratui.
