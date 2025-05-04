@@ -147,7 +147,7 @@ Tokie metodai, kaip _is_vehicle_rented ir _save_rental_record, slepia sudėting�
 
 Python'e prieigos lygiai nėra griežtai kontroliuojami, tačiau naudojami vardų žymėjimai (naming conventions), kurie padeda atskirti, kaip nariai turėtų būti naudojami:
 
-###  Pavyzdys
+###  Paprastesnis pavyzdys 
 
 ```python
 class Transport:
@@ -163,3 +163,32 @@ class Transport:
 | `_protected_var` | **Protected**  | Apsaugotas – nenaudoti iš išorės, bet pasiekiamas paveldinose klasėse.  |
 | `__private_var`  | **Private**    | Privatus – paslėptas nuo išorinio naudojimo (atliekamas vardų maskavimas). |
 
+# **Pasirinktas dizaino šablonas: Factory Method (Gamyklos metodas)**
+
+![](images/design.png)
+
+Sukurtas `VehicleFactory` klasės metodas `create_vehicle(...)`, kuris, pagal pateiktą transporto priemonės tipą (`"car"`, `"motorcycle"`, `"agricultural"`, `"non_motor"`), **grąžina atitinkamą objekto egzempliorių** (pvz., `Car`, `Motorcycle` ir t. t.).
+Klientinis kodas nurodo tik transporto priemonės tipą, bet neturi žinoti konkrečios klasės ar jos kūrimo detalių.
+
+Šis metodas atitinka Factory Method principą – **visa objektų kūrimo logika yra sutelkta vienoje vietoje**. Tai leidžia lengvai pridėti naujas transporto priemonių rūšis ar modifikuoti kūrimo procesą neliečiant kitų sistemos dalių.Šiame projekte pritaikytas **Factory Method** dizaino šablonas. Jo esmė – **sukurti objektus per atskirą metodą (vadinamą „fabriku“), o ne aprašant klases tiesiogiai programos logikoje**. Toks sprendimas leidžia atskirti objektų kūrimo logiką nuo jų naudojimo, taip padidinant sistemos lankstumą, testuojamumą ir plėtrą.
+
+### **Kodėl šis šablonas tinkamiausias:**
+
+- **Plėtra (Extensibility)**: Galima lengvai pridėti naujus transporto priemonių tipus papildant `create_vehicle` metodą, nekeičiat likusio kodo.
+    
+- **Atskyrimas (Decoupling)**: Klientinis kodas nepriklauso nuo konkrečių transporto klasių – jis tiesiog naudoja gamyklos metodą.
+    
+- **Atsakomybės paskirstymas**: `VehicleFactory` atsakinga tik už transporto priemonių kūrimą, o ne už jų veikimą.
+    
+
+### **Kodėl kiti šablonai netinka:**
+
+- **Singleton** – naudojamas, kai reikia vieno bendro objekto, o čia kuriami skirtingi transporto priemonių objektai.
+    
+- **Abstract Factory** – reikalingas, kai kuriamos visos objektų grupės (šeimos), o čia pakanka vienetinių objektų kūrimo.
+    
+- **Builder** – skirtas labai sudėtingiems objektams su daug parametrų, o čia objektų kūrimas paprastesnis.
+    
+- **Prototype** – naudojamas klonuoti esamus objektus, o mūsų atveju objektai kuriami naujai.
+    
+- **Adapter / Decorator / Composite** – tai struktūriniai šablonai, labiau tinkami modifikuoti ar kombinuoti objektų elgseną, o ne juos kurti.
