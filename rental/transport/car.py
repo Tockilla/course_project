@@ -12,4 +12,7 @@ class Car(Transport):
         self.extra = extra
 
     def show_info(self):
-        return f"[CAR] {self.id}: {self.brand} {self.model} ({self.year}, {self.color}, {self.engine_capacity}L) - {self.extra}"
+        return (
+            f"[CAR] {self.id}: {self.brand} {self.model} ({self.year}"
+            f"{self.color}, {self.engine_capacity}L) - {self.extra}"
+        )
