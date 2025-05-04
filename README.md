@@ -200,6 +200,42 @@ jeigu sunaikinsi vieną iš objektų, kitas liks neliestas.
 
 ![](images/ags.png)
 
-Klasė `RentalManager` saugo transporto priemonių sąrašą per `vehicles` kintamąjį. Šios transporto priemonės nėra sukuriamos `RentalManager` viduje – jos perduodamos iš išorės (pavyzdžiui, sukurtos per `VehicleFactory`). Tai reiškia, kad `RentalManager` tiesiog **„priima“ jau sukurtus objektus ir su jais dirba**, bet **jų gyvenimo trukmės nekontroliuoja** – jei `RentalManager` ištrinsim, transporto priemonės vis tiek gali likti.
+Klasė `RentalManager` saugo transporto priemonių sąrašą per `vehicles` kintamąjį. Šios transporto priemonės nėra sukuriamos `RentalManager` viduje – jos perduodamos iš išorės (pavyzdžiui, sukurtos per `VehicleFactory`). Tai reiškia, kad `RentalManager` tiesiog **„priima“ jau sukurtus objektus ir su jais dirba**, bet **jų gyvenimo trukmės nekontroliuoja** – jei `RentalManager` ištrinsim, transporto priemonės vis tiek gali likti
 
 Būtent dėl to šis ryšys ir vadinamas **agregacija** – klasė turi kitų objektų, bet nėra už juos atsakinga nuo pradžios iki galo.
+
+## Darbas su duomenų failais(Skaitymas rašymas )
+
+
+Šiame projekte duomenų saugojimui ir apdorojimui naudojami CSV (Comma-Separated Values) formato tekstiniai failai. Failai naudojami:
+
+- Transporto priemonių informacijos saugojimui
+- Nuomos įrašų registravimui ir tikrinimui
+
+![](images/fail.png)
+
+```python
+with open(self.file_path, newline="", encoding="utf-8") as csvfile:
+    reader = csv.DictReader(csvfile)
+```
+
+Nauji įrašai pridedami naudojant režimą `"a"` (append), kuris neištrina esamo turinio:
+```python
+with open(self.rental_file_path, "a") as file:
+    file.write(record.to_csv_row() + "\n")
+```
+Failo perrašymui (kai norima pakeisti ar pašalinti įrašus) naudojamas režimas `"w"`:
+```python
+with open(self.rental_file_path, "w") as file:
+    for line in lines:
+        if not line.startswith(vehicle_id + ","):
+            file.write(line)
+``` 
+
+| Režimas | Pavadinimas         | Aprašymas                                                                           |
+| ------: | ------------------- | ----------------------------------------------------------------------------------- |
+|   `"r"` | Read (skaitymas)    | Atidaro esamą failą skaitymui. Jei failas neegzistuoja – sukeliama klaida.          |
+|   `"w"` | Write (rašymas)     | Sukuria naują failą arba perrašo esamą. Ištrina visą ankstesnį turinį.              |
+|   `"a"` | Append (pridėjimas) | Atidaro failą priedui. Įrašai pridedami failo pabaigoje, neištrinant esamo turinio. |
+
+# Išvada
