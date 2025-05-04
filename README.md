@@ -18,10 +18,10 @@ Sistema palaiko šias funkcijas:
 
 1. Įsitikinkite, kad turite **Python 3.x** versiją.
 2. Paleiskite `main.py` failą terminale: bash python main.py
-3. ![[Pasted image 20250503174651.png]]
+3. ![](images/program.start.png)
 4. Atidarius langą, ekrane pasirodys Transporto nuomos sistema su penkiais galimais pasirinkimais. Norėdami atlikti konkretų veiksmą (pvz., peržiūrėti transporto priemones ar išsinuomoti), įveskite atitinkamą skaičių nuo 1 iki 5 ir paspauskite Enter.
 
-5. **Norėdami pamatyti, kokios transporto priemonės yra galimos nuomai, pirmiausia turite pasirinkti 1 – „Show all vehicles“.** Tik tada galėsite matyti siūlomų automobilių sąrašą ir priimti sprendimą dėl nuomos. Atrodo taip:![[Pasted image 20250503180328.png]]6. **Kiekvienai transporto priemonei pateikiama ši informacija:  
+5. **Norėdami pamatyti, kokios transporto priemonės yra galimos nuomai, pirmiausia turite pasirinkti 1 – „Show all vehicles“.** Tik tada galėsite matyti siūlomų automobilių sąrašą ir priimti sprendimą dėl nuomos. Atrodo taip:![](images\program.use.png)6. **Kiekvienai transporto priemonei pateikiama ši informacija:  
 – **Transporto tipas** (pvz., automobilis, motociklas),  
 – **Identifikavimo numeris (ID)** – šio numerio programa prašys, kai norėsite atlikti nuomos ar atšaukimo veiksmą,  
 – **Pagaminimo metai**,  
