@@ -88,7 +88,7 @@ Tai leidžia visus transporto priemonių objektus (nesvarbu, ar tai automobilis,
 
 Pateiktuose ekrano nuotraukose matyti, kaip kiekviena klasė (`Car` ir `Motorcycle`) turi savo `show_info()` metodo versiją, kuri gražiai suformatuoja ir pateikia visą su objektu susijusią informaciją: markę, modelį, metus, spalvą, variklio tūrį bei papildomą informaciją.
 
-## Abstrakcija
+### Abstrakcija
 
 Abstrakti klasė – tai tarsi šablonas būsimiems objektams, kuris apibrėžia, kokie metodai ar savybės privalo būti klasėse, paveldinčiose iš jos. Ji neskirta kurti tiesioginius objektus, o naudojamas kaip pagrindas, pamatas (šablonas), pagal kurį kuriamos konkrečios klasės.
 
@@ -111,7 +111,7 @@ Sutalpinti bendrą logiką vienoje vietoje, išvengiant pasikartojimo;
 Užtikrinti struktūros vientisumą – visos transporto priemonės turės show_info() metodą;Lengvai išplėsti sistemą pridedant naujus transporto tipų klasės (pvz., Truck, Car, neprarandant suderinamumo su jau egzistuojančia logika.
 Ekrano nuotraukoje parodyta, kaip sukuriama ši bazinė abstrakti klasė Transport bei abstraktus metodas show_info() – tai esminis žingsnis struktūrizuojant programą pagal OOP principus.
 
-## Paveldėjimas
+### Paveldėjimas
 Paveldėjimas – tai objektinio programavimo principas, leidžiantis vienai klasei (pvz., Car) perimti savybes ir metodus iš kitos – bazinės klasės (pvz., Transport). Taip užtikrinamas kodo pakartotinis naudojimas ir leidžiama išplėsti esamą funkcionalumą, nekuriant visko iš naujo.
 
 ![](images/pav.png)
@@ -120,7 +120,7 @@ Klasė Car paveldi iš abstrakčios bazinės klasės Transport, kuri apibrėžia
 Naudojant super().__init__() metodą, paveldimi bendri atributai, o papildomi atributai, tokie kaip year, color, engine_capacity ir extra, pridedami Car klasėje.
 Taip užtikrinamas kodo pakartotinio naudojimo principas – bendra logika laikoma bazinėje klasėje, o specifinė informacija aprašoma paveldinčiose klasėse.
 
-## Inkapsuliacija
+### Inkapsuliacija
 Inkapsuliacija – tai vidinių objekto duomenų apsaugojimas nuo tiesioginės prieigos iš išorės. Vietoj to siūloma naudoti metodus arba specialius „saugiklius“, kaip @property, kad būtų galima kontroliuoti:
 
 
@@ -147,7 +147,7 @@ Tokie metodai, kaip _is_vehicle_rented ir _save_rental_record, slepia sudėting�
 
 Python'e prieigos lygiai nėra griežtai kontroliuojami, tačiau naudojami vardų žymėjimai (naming conventions), kurie padeda atskirti, kaip nariai turėtų būti naudojami:
 
-###  Paprastesnis pavyzdys 
+####  Paprastesnis pavyzdys 
 
 ```python
 class Transport:
