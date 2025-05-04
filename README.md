@@ -21,7 +21,10 @@ Sistema palaiko šias funkcijas:
 3. ![](images/program.start.png)
 4. Atidarius langą, ekrane pasirodys Transporto nuomos sistema su penkiais galimais pasirinkimais. Norėdami atlikti konkretų veiksmą (pvz., peržiūrėti transporto priemones ar išsinuomoti), įveskite atitinkamą skaičių nuo 1 iki 5 ir paspauskite Enter.
 
-5. **Norėdami pamatyti, kokios transporto priemonės yra galimos nuomai, pirmiausia turite pasirinkti 1 – „Show all vehicles“.** Tik tada galėsite matyti siūlomų automobilių sąrašą ir priimti sprendimą dėl nuomos. Atrodo taip:![](images\program.use.png)6. **Kiekvienai transporto priemonei pateikiama ši informacija:  
+5. **Norėdami pamatyti, kokios transporto priemonės yra galimos nuomai, pirmiausia turite pasirinkti 1 – „Show all vehicles“.** Tik tada galėsite matyti siūlomų automobilių sąrašą ir priimti sprendimą dėl nuomos.
+6. Atrodo taip:![naudojimas](images/program.use.png)
+
+6. **Kiekvienai transporto priemonei pateikiama ši informacija:  
 – **Transporto tipas** (pvz., automobilis, motociklas),  
 – **Identifikavimo numeris (ID)** – šio numerio programa prašys, kai norėsite atlikti nuomos ar atšaukimo veiksmą,  
 – **Pagaminimo metai**,  
@@ -75,9 +78,5 @@ Abu failai buvo patalpinti **vienoje bendroje saugykloje**, užtikrinant aiški�
 ### Polimorfizmas
 
 **Polimorfizmas** reiškia, kad ta pati metodo antraštė (pvz., `show_info()`) gali būti **įgyvendinta skirtingai** skirtingose klasėse. Tai leidžia įvairiai naudoti tą patį metodą, o elgesys priklauso nuo to, kokios konkrečios klasės objektas tą metodą kviečia.
-![[Pasted image 20250503223018.png]] 
-![[Pasted image 20250503223559.png]] 
 
-
-![Sistemos diagrama](images/picture1.png)
-
+![img](images/picture1.png) ![img](images/picture3.png) ![img](images/picture2)	
