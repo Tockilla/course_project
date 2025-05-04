@@ -123,13 +123,14 @@ Taip užtikrinamas kodo pakartotinio naudojimo principas – bendra logika laiko
 ## Inkapsuliacija
 Inkapsuliacija – tai vidinių objekto duomenų apsaugojimas nuo tiesioginės prieigos iš išorės. Vietoj to siūloma naudoti metodus arba specialius „saugiklius“, kaip @property, kad būtų galima kontroliuoti:
 
+
+- kaip tie duomenys pasiekiami,
+- ar jie gali būti keičiami,
+- ar reikalinga papildoma logika (pvz., validacija, logų rašymas ir t. t.).
+
 ![](images/ink.png)
 
 ![](images/ink2.png)
-
-kaip tie duomenys pasiekiami,
-ar jie gali būti keičiami,
-ar reikalinga papildoma logika (pvz., validacija, logų rašymas ir t. t.).
 
 
 Metodai kaip:
@@ -140,7 +141,8 @@ Metodai kaip:
 
 yra inkapsuliacijos pavyzdžiai, ir jų pavadinimai su pabraukimu (_) rodo, kad tai yra "protected" (saugomi, vidaus naudojimui skirti) metodai.
 
-Klasėje naudojami metodai su pavadinimais, prasidedančiais pabraukimu (_), yra skirti vidiniam naudojimui – tai yra inkapsuliacijos požymis. Tokie metodai, kaip _is_vehicle_rented ir _save_rental_record, slepia sudėtingą ar jautrią logiką nuo išorinio pasaulio, taip apsaugodami objekto būseną bei struktūrą.
+Klasėje naudojami metodai su pavadinimais, prasidedančiais pabraukimu (_), yra skirti vidiniam naudojimui – tai yra inkapsuliacijos požymis.
+Tokie metodai, kaip _is_vehicle_rented ir _save_rental_record, slepia sudėtingą ar jautrią logiką nuo išorinio pasaulio, taip apsaugodami objekto būseną bei struktūrą.
 
 
 Python'e prieigos lygiai nėra griežtai kontroliuojami, tačiau naudojami vardų žymėjimai (naming conventions), kurie padeda atskirti, kaip nariai turėtų būti naudojami:
