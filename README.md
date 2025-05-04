@@ -192,3 +192,14 @@ Klientinis kodas nurodo tik transporto priemonės tipą, bet neturi žinoti konk
 - **Prototype** – naudojamas klonuoti esamus objektus, o mūsų atveju objektai kuriami naujai.
     
 - **Adapter / Decorator / Composite** – tai struktūriniai šablonai, labiau tinkami modifikuoti ar kombinuoti objektų elgseną, o ne juos kurti.
+
+## Agregacija
+
+Agregacija – tai toks ryšys tarp klasių, kai viena klasė „turi“ kitos klasės objektus, bet jie gali egzistuoti ir be jos. Kitaip tariant, tai kaip laikinas bendradarbiavimas: viena klasė naudoja kitą, bet nėra nuo jos priklausoma visiškai.
+jeigu sunaikinsi vieną iš objektų, kitas liks neliestas.
+
+![](images/ags.png)
+
+Klasė `RentalManager` saugo transporto priemonių sąrašą per `vehicles` kintamąjį. Šios transporto priemonės nėra sukuriamos `RentalManager` viduje – jos perduodamos iš išorės (pavyzdžiui, sukurtos per `VehicleFactory`). Tai reiškia, kad `RentalManager` tiesiog **„priima“ jau sukurtus objektus ir su jais dirba**, bet **jų gyvenimo trukmės nekontroliuoja** – jei `RentalManager` ištrinsim, transporto priemonės vis tiek gali likti.
+
+Būtent dėl to šis ryšys ir vadinamas **agregacija** – klasė turi kitų objektų, bet nėra už juos atsakinga nuo pradžios iki galo.
